@@ -1,6 +1,12 @@
-fetch('./result.json')
+fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR089kXRbpkEeIQWA-h2pcR9-8Noh_WWbT0XxAMvMJ6v-Zhno_DgMNVp3_c')
 	.then(data => data.json())
 	.then(res => setNumbers(res))
+
+setTimeout(() => {
+	fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR089kXRbpkEeIQWA-h2pcR9-8Noh_WWbT0XxAMvMJ6v-Zhno_DgMNVp3_c')
+		.then(data => data.json())
+		.then(res => setNumbers(res))
+}, 60001)
 
 function setNumbers(res) {
 	// ================================ UPDTE DATES
