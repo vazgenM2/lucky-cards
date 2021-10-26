@@ -1,9 +1,17 @@
-fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR089kXRbpkEeIQWA-h2pcR9-8Noh_WWbT0XxAMvMJ6v-Zhno_DgMNVp3_c')
+fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0')
 	.then(data => data.json())
 	.then(res => setNumbers(res))
+	.catch(e => console.log(e))
+
+// , {
+// 	method: 'GET',
+// 	headers: {
+// 		'Content-Type': 'application/json'
+// 	}
+// }
 
 setTimeout(() => {
-	fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR089kXRbpkEeIQWA-h2pcR9-8Noh_WWbT0XxAMvMJ6v-Zhno_DgMNVp3_c')
+	fetch('http://aio.baroneracing.ie:82/lotto/results?')
 		.then(data => data.json())
 		.then(res => setNumbers(res))
 }, 60001)
