@@ -14,20 +14,31 @@ const requestURL = 'http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNC
 function sendRequest(method, url, body = null) {
 	return new Promise((resolve, reject) => {
 		const xhr = new XMLHttpRequest()
-		xhr.open('GET', requestURL)
+
+		xhr.open(method, url)
+
 		xhr.responseType = 'json'
+		xhr.setRequestHeader('Content-Type', 'application/json')
+
 		xhr.onload = () => {
-			setNumbers(xhr.response)
+			if (xhr.status >= 400) {
+				reject(xhr.response)
+			} else {
+				resolve(xhr.response)
+			}
 		}
-		xhr.send()
+
+		xhr.onerror = () => {
+			reject(xhr.response)
+		}
+
+		xhr.send(JSON.stringify(body))
 	})
 }
 
 sendRequest('GET', requestURL)
-	.then(data => console.log(data))
+	.then(data => setNumbers(data))
 	.catch(err => console.log(err))
-
-
 
 function setNumbers(res) {
 	// ================================ UPDTE DATES
