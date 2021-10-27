@@ -1,13 +1,33 @@
-fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0')
-	.then(data => data.json())
-	.then(res => setNumbers(res))
-	.catch(e => console.log(e))
+// fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0')
+// 	.then(data => data.json())
+// 	.then(res => setNumbers(res))
+// 	.catch(e => console.log(e))
 
-setTimeout(() => {
-	fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0')
-		.then(data => data.json())
-		.then(res => setNumbers(res))
-}, 60001)
+// setTimeout(() => {
+// 	fetch('http://aio.baroneracing.ie:82/lotto/results?')
+// 		.then(data => data.json())
+// 		.then(res => setNumbers(res))
+// }, 60001)
+
+const requestURL = 'http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0'
+
+function sendRequest(method, url, body = null) {
+	return new Promise((resolve, reject) => {
+		const xhr = new XMLHttpRequest()
+		xhr.open('GET', requestURL)
+		xhr.responseType = 'json'
+		xhr.onload = () => {
+			setNumbers(xhr.response)
+		}
+		xhr.send()
+	})
+}
+
+sendRequest('GET', requestURL)
+	.then(data => console.log(data))
+	.catch(err => console.log(err))
+
+
 
 function setNumbers(res) {
 	// ================================ UPDTE DATES
