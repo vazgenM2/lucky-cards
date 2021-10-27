@@ -1,3 +1,4 @@
+// ================ REQUEST WITH FETCH
 // fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0')
 // 	.then(data => data.json())
 // 	.then(res => setNumbers(res))
@@ -9,6 +10,7 @@
 // 		.then(res => setNumbers(res))
 // }, 60001)
 
+// ================ AJAX REQUEST 
 const requestURL = 'http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0'
 
 function sendRequest(method, url, body = null) {
@@ -39,9 +41,10 @@ function sendRequest(method, url, body = null) {
 sendRequest('GET', requestURL)
 	.then(data => setNumbers(data))
 	.catch(err => console.log(err))
+// ===============================================================
 
 function setNumbers(res) {
-	// ================================ UPDTE DATES
+	// ================================ UPDATE DATES
 	for (let i = 0; i < 4; i++) {
 		if (res.irish_lucky[i]) document.querySelectorAll('.date.irish-item')[i].innerHTML = res.irish_lucky[i].date
 		if (res.euro_lucky[i]) document.querySelectorAll('.date.euro-item')[i].innerHTML = res.euro_lucky[i].date
