@@ -1,8 +1,9 @@
 // ================ REQUEST WITH FETCH
 // fetch('http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR27YNClMuocFtqeinLs5wQDiM041Kujki3wJc2qaTkAFo5wgTqoxdkzxz0')
-// 	.then(data => data.json())
-// 	.then(res => setNumbers(res))
-// 	.catch(e => console.log(e))
+fetch('./results.json')
+	.then(data => data.json())
+	.then(res => setNumbers(res))
+// .catch(e => console.log(e))
 
 // setTimeout(() => {
 // 	fetch('http://aio.baroneracing.ie:82/lotto/results?')
@@ -11,36 +12,36 @@
 // }, 60001)
 
 // ================ AJAX REQUEST 
-const requestURL = 'http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR3me9uLLADQS_J3rmPsM7QGaBMQ5cwpRDm79Do2op51P_2gP9sqedpZ5eI'
+// const requestURL = 'http://aio.baroneracing.ie:82/lotto/results?fbclid=IwAR3me9uLLADQS_J3rmPsM7QGaBMQ5cwpRDm79Do2op51P_2gP9sqedpZ5eI'
 
-function sendRequest(method, url, body = null) {
-	return new Promise((resolve, reject) => {
-		const xhr = new XMLHttpRequest()
+// function sendRequest(method, url, body = null) {
+// 	return new Promise((resolve, reject) => {
+// 		const xhr = new XMLHttpRequest()
 
-		xhr.open(method, url)
+// 		xhr.open(method, url)
 
-		xhr.responseType = 'json'
-		xhr.setRequestHeader('Content-Type', 'application/json')
+// 		xhr.responseType = 'json'
+// 		xhr.setRequestHeader('Content-Type', 'application/json')
 
-		xhr.onload = () => {
-			if (xhr.status >= 400) {
-				reject(xhr.response)
-			} else {
-				resolve(xhr.response)
-			}
-		}
+// 		xhr.onload = () => {
+// 			if (xhr.status >= 400) {
+// 				reject(xhr.response)
+// 			} else {
+// 				resolve(xhr.response)
+// 			}
+// 		}
 
-		xhr.onerror = () => {
-			reject(xhr.response)
-		}
+// 		xhr.onerror = () => {
+// 			reject(xhr.response)
+// 		}
 
-		xhr.send(JSON.stringify(body))
-	})
-}
+// 		xhr.send(JSON.stringify(body))
+// 	})
+// }
 
-sendRequest('GET', requestURL)
-	.then(data => setNumbers(data))
-	.catch(err => console.log(err))
+// sendRequest('GET', requestURL)
+// 	.then(data => setNumbers(data))
+// 	.catch(err => console.log(err))
 // ===============================================================
 
 function setNumbers(res) {
