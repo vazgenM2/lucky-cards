@@ -5,7 +5,7 @@ fetch('./results.json')
 	.then(res => setNumbers(res))
 	.catch(e => console.log(e))
 
-setTimeout(() => {
+setInterval(() => {
 	fetch('./results-2.json')
 		.then(data => data.json())
 		.then(res => setNumbers(res))
