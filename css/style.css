@@ -600,3 +600,7 @@ body, html {
 .uk .list-name, .uk .bonus-part.main-bonus::after {
   color: #000078;
 }
+
+.img-num {
+  width: 40px;
+}

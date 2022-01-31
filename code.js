@@ -5,7 +5,7 @@ fetch('./results.json')
 	.then(res => setNumbers(res))
 	.catch(e => console.log(e))
 
-setInterval(() => {
+setTimeout(() => {
 	fetch('./results-2.json')
 		.then(data => data.json())
 		.then(res => setNumbers(res))
@@ -24,7 +24,8 @@ function setNumbers(res) {
 	// ================================ IRISH LUCKY
 	for (let i = 0; i < document.querySelector('.irish-part-1 .irish-main .general-part').childElementCount; i++) {
 		if (res.irish_lucky[0].numbers.main) {
-			document.querySelector('.irish-part-1 .irish-main .general-part').children[i].innerHTML = res.irish_lucky[0].numbers.main[i]
+			document.querySelector('.irish-part-1 .irish-main .general-part').children[i].innerHTML = `<img class="img-num" src="./nums/1.png" />`
+			// res.irish_lucky[0].numbers.main[i]
 		}
 		if (res.irish_lucky[0].numbers.plus_1) {
 			document.querySelector('.irish-part-1 .irish-plus-1 .general-part').children[i].innerHTML = res.irish_lucky[0].numbers.plus_1[i]
