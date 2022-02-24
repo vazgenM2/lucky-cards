@@ -360,10 +360,6 @@ body, html {
   border: 2px solid #004600;
 }
 
-.irish .nums-list span {
-  border: 1px solid #004600;
-}
-
 .irish .list-name, .irish .bonus-part.main-bonus::after {
   color: #004600;
 }
@@ -393,10 +389,6 @@ body, html {
 
 .euro .numbers_main {
   background-color: #53137360;
-}
-
-.euro .nums-list span {
-  border: 1px solid #3B0050;
 }
 
 .euro .list-name, .euro .bonus-part.main-bonus::after {
@@ -439,10 +431,6 @@ body, html {
 
 .daily .numbers_main {
   background-color: #07AFFC48;
-}
-
-.daily .nums-list span {
-  border: 1px solid #00A3FC;
 }
 
 .daily .list-name, .daily .bonus-part.main-bonus::after {
@@ -521,10 +509,6 @@ body, html {
   background-color: #FF6A1E65;
 }
 
-.s49 .nums-list span {
-  border: 1px solid #FF3C14;
-}
-
 .s49 .list-name, .s49 .bonus-part.main-bonus::after {
   color: #FF3C14;
 }
@@ -593,14 +577,10 @@ body, html {
   padding: 5px 10px 20px;
 }
 
-.uk .nums-list span {
-  border: 1px solid #000078;
-}
-
 .uk .list-name, .uk .bonus-part.main-bonus::after {
   color: #000078;
 }
 
 .img-num {
-  width: 40px;
+  width: 41px;
 }
