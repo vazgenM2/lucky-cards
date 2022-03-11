@@ -58,28 +58,28 @@ function setNumbers(res) {
 		document.querySelector('.irish-part-1 .irish-main .bonus-part  span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[0].numbers.bonusball_main}.png" />`
 	}
 	if (res.irish_lucky[0].numbers.bonusball_plus_1) {
-		document.querySelector('.irish-part-1 .irish-plus-1 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[0].numbers.bonusball_plus_1}.png" />`
+		document.querySelector('.irish-part-1 .irish-plus-1 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Plus1/${res.irish_lucky[0].numbers.bonusball_plus_1}.png" />`
 	}
 	if (res.irish_lucky[0].numbers.bonusball_plus_2) {
-		document.querySelector('.irish-part-1 .irish-plus-2 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[0].numbers.bonusball_plus_2}.png" />`
+		document.querySelector('.irish-part-1 .irish-plus-2 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Plus2/${res.irish_lucky[0].numbers.bonusball_plus_2}.png" />`
 	}
 	if (res.irish_lucky[1].numbers.bonusball_main) {
 		document.querySelector('.irish-part-2 .irish-main .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[1].numbers.bonusball_main}.png" />`
 	}
 	if (res.irish_lucky[1].numbers.bonusball_plus_1) {
-		document.querySelector('.irish-part-2 .irish-plus-1 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[1].numbers.bonusball_plus_1}.png" />`
+		document.querySelector('.irish-part-2 .irish-plus-1 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Plus1/${res.irish_lucky[1].numbers.bonusball_plus_1}.png" />`
 	}
 	if (res.irish_lucky[1].numbers.bonusball_plus_2) {
-		document.querySelector('.irish-part-2 .irish-plus-2 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[1].numbers.bonusball_plus_2}.png" />`
+		document.querySelector('.irish-part-2 .irish-plus-2 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Plus2/${res.irish_lucky[1].numbers.bonusball_plus_2}.png" />`
 	}
 	if (res.irish_lucky[2].numbers.bonusball_main) {
 		document.querySelector('.irish-part-3 .irish-main .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[2].numbers.bonusball_main}.png" />`
 	}
 	if (res.irish_lucky[2].numbers.bonusball_plus_1) {
-		document.querySelector('.irish-part-3 .irish-plus-1 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[2].numbers.bonusball_plus_1}.png" />`
+		document.querySelector('.irish-part-3 .irish-plus-1 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Plus1/${res.irish_lucky[2].numbers.bonusball_plus_1}.png" />`
 	}
 	if (res.irish_lucky[2].numbers.bonusball_plus_2) {
-		document.querySelector('.irish-part-3 .irish-plus-2 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Main/${res.irish_lucky[2].numbers.bonusball_plus_2}.png" />`
+		document.querySelector('.irish-part-3 .irish-plus-2 .bonus-part span').innerHTML = `<img class="img-num" src="./imges/Irish/Plus2/${res.irish_lucky[2].numbers.bonusball_plus_2}.png" />`
 	}
 
 	// ================================ EURO LUCKY
